@@ -1,0 +1,21 @@
+<%- include('./partials/header') %>
+<%- include('Navbar') %>
+
+
+    <form action="/insertData" method="post" enctype="multipart/form-data" class="Formating"> 
+        <h1>Registration Form</h1> <br/><br/>
+        <h3>First Name</h3>
+        <input type="text" name="fname" placeholder="Firstname">
+        <h3>Last Name</h3>
+        <input type="text" name="lname" placeholder="Lastname">
+        <h3>Email</h3>
+        <input type="email" name="email" placeholder="Email"><br/><br/>
+        <input type="file" name="image">
+        <br/>
+        <br/>
+        <button type="submit" class="btn btn-primary">Register</button>
+    </form>
+
+
+
+<%- include('./partials/footer') %>

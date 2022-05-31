@@ -1,0 +1,19 @@
+<%- include('./partials/header') %>
+<%- include('Navbar') %>
+    <form action="/update/<%= users._id %>" method="post" enctype="multipart/form-data"> 
+        <h1>Update Your Data</h1>
+        <h3>First Name</h3>
+        <input type="text" name="fname" placeholder="Firstname" value="<%= users.fname %>">
+        <h3>Last Name</h3>
+        <input type="text" name="lname" placeholder="Lastname" value="<%= users.lname %>">
+        <h3>Email</h3>
+        <input type="email" name="email" placeholder="Email" value="<%= users.email%>"><br/><br/>
+        <input type="file" name="image">
+        <br/>
+        <br/>
+        <button type="submit" class="btn btn-secondary">update</button>
+    </form>
+
+
+
+<%- include('./partials/footer') %>
