@@ -1,0 +1,33 @@
+<%- include("partials/header") -%>
+
+<div style="width: 360px; margin: auto; margin-top: 20px;">
+    <h3 style="color: lightseagreen;"> <%=today%> </h3>
+    <h2 style="color: lightseagreen;"> <%=title%> </h2>
+    </div>
+
+    <form action="/" method="post">
+
+        <div style="width: 350px; margin: auto;">
+            <input type="text" name="newItem" class="form-control" placeholder="New Item"> <br/>
+            <button type="submit" class="btn btn-primary btn-block" name="list" value="<%=title%>">Add</button>
+        </div>
+
+    </form>
+
+    <br/><br/>
+    
+    <div style="width: 350px; margin: auto;">
+        <% for(let i=0; i<items.length; i++) { %>
+        <div>
+            <p id="CheckBox<%=i%>"> <input type="checkbox" id="CheckBox<%=i%>" onClick="fun(this.id)">  <%= items[i] %> </p>
+        </div>
+        <% } %>
+    </div>
+
+    <script>
+        function fun(id) {
+            document.getElementById(id).style.textDecoration = "line-through";
+        }
+        </script>
+
+<%- include("partials/footer") -%>

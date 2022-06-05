@@ -11,30 +11,3 @@
     <title>To Do List</title>
 </head>
 <body>
-
-    <div style="width: 360px; margin: auto;">
-    <h1 style="color: lightseagreen;"> <%=today%> <br/> ToDo List... </h1>
-    </div>
-
-    <form action="/" method="post">
-
-        <div style="width: 350px; margin: auto;">
-            <input type="text" name="newItem" class="form-control"> <br/>
-            <button type="submit" class="btn btn-primary btn-block">Add</button>
-        </div>
-
-    </form>
-
-    <br/><br/>
-
-    <div style="width: 350px; margin: auto;">
-    <ul>
-        <% for(let i=0; i<items.length; i++) { %>
-
-            <li> <%= items[i] %> </li>
-        <% } %>
-    </ul>
-    </div>
-
-</body>
-</html>
